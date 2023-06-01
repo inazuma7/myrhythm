@@ -5,10 +5,11 @@
   /* Colors */
   --first-color: #467BA4ff;
   --second-color: #776AA9ff;
+  --nav-color:#CDDEEE;
   --white-color: #fff;
   --black: #010101ff;
   --silver-lake-blue: #668CAFff;
-  --rose-quartz: #ADA3BEff;
+  --hover-nav: #ADA3BEff;
   
   /* Font and typography */
 
@@ -111,6 +112,7 @@ p {
 
 .nav__list {
   text-align: center;
+  font-size: small;
 }
 
 .nav__item {
@@ -118,25 +120,37 @@ p {
 }
 
 .nav__link {
-  padding: .5rem;
-  color: var(--white-color);
+  padding: 1rem;
+  color: var(--nav-color);
+  text-decoration: none;
+	transition: .25s ease;
+}
+
+.nav__link:hover {
+  color: var(--hover-nav);
 }
 
 .nav__logo {
-  color: #baf1e4;
+  color: #F2ECF3;
   font-family: 'Calistoga', cursive;
 }
 
 .nav__toggle {
   font-size: 2rem;
   cursor: pointer;
+  color: var(--nav-color);
 }
 
 .nav__icon {
   font-size: 1.3rem;
   text-align: right;
+  color: var(--nav-color);
 }
 
+.nav__icon:hover,
+.nav__toggle:hover {
+color: var(--hover-nav);
+}
 
 
 /*Aparecer menu*/
@@ -175,6 +189,18 @@ p {
   width: 235px;
   height: auto;
 }
+
+.hover_img {
+
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: none;
+}
+
+.home__img:hover .hover_img {
+  display: inline;
+   }
 
 .home__secondary {
   width: 0;
